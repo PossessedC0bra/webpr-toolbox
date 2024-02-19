@@ -1,0 +1,13 @@
+import "@/styles/globals.css"
+import {SpeedInsights} from "@vercel/speed-insights/next";
+import {Analytics} from "@vercel/analytics/react";
+
+export const App = ({Component, pageProps}) => {
+    return <>
+        <Analytics/>
+        <SpeedInsights/>
+        <Component {...pageProps} />
+    </>
+}
+
+export default App
