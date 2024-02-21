@@ -1,4 +1,12 @@
 {
   "index": "Introduction",
-  "week1": "Week 1"
+  "week1": "Week 1",
+  "codeRunner": {
+    "title": "Code Runner",
+    "type": "page",
+    "theme": {
+      "layout": "full",
+      "footer": false
+    }
+  }
 }
