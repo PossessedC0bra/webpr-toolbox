@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/webpr-quiz.iml" filepath="$PROJECT_DIR$/.idea/webpr-quiz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/webpr-toolbox.iml" filepath="$PROJECT_DIR$/.idea/webpr-toolbox.iml" />
     </modules>
   </component>
 </project>
