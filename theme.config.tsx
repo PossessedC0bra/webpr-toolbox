@@ -1,12 +1,16 @@
 import React from 'react'
-import { DocsThemeConfig } from 'nextra-theme-docs'
+import {DocsThemeConfig} from 'nextra-theme-docs'
 
 const config: DocsThemeConfig = {
-  logo: <span><b>WEBPR</b></span>,
-  project: {
-    link: 'https://github.com/possessedc0bra/webpr-quiz',
-  },
-  docsRepositoryBase: 'https://github.com/possessedc0bra/webpr-quiz/tree/main',
+    logo: <span><b>WEBPR Toolbox</b></span>,
+    project: {
+        link: 'https://github.com/possessedc0bra/webpr-toolbox',
+    },
+    useNextSeoProps() {
+        return {
+            titleTemplate: '%s – WEBPR Toolbox',
+        }
+    }
 }
 
 export default config
