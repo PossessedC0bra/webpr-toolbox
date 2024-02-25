@@ -1,63 +1,107 @@
+import Question from "../../components/Question";
+
 # Quiz 1
 
 ## Question 1
 
-```js copy
+<Question
+    question="Shows 'true'?"
+    code='function foo() { return true; } foo;'
+    expectedValue={true}
+>
+    ```js copy showLineNumbers filename="JavaScript"
 function foo() {
     return true;
 }
 
-console.log(foo);
+    document.writeln(foo);
 ```
+</Question>
 
 ## Question 2
 
-```js copy
+<Question
+    question="Shows 'true'?"
+    code='const foo = () => true; foo();'
+    expectedValue={true}
+>
+    ```js copy showLineNumbers filename="JavaScript"
 const foo = () => true;
 
-console.log(foo());
+    document.writeln(foo());
 ```
+</Question>
 
 ## Question 3
 
-```js copy
+<Question
+    question="Shows 'true'?"
+    code='function foo() { true; } foo;'
+    expectedValue={true}
+>
+    ```js copy showLineNumbers filename="JavaScript"
 function foo() {
     true;
 }
 
-console.log(foo);
+    document.writeln(foo);
 ```
+</Question>
 
 ## Question 4
 
-```js copy
+<Question
+    question="Shows 'true'?"
+    code='const foo = (x) => true; foo();'
+    expectedValue={true}
+>
+    ```js copy showLineNumbers filename="JavaScript"
 const foo = (x) => true;
 
-console.log(foo());
+    document.writeln(foo());
 ```
+</Question>
 
 ## Question 5
 
-```js copy
+<Question
+    question="Shows 'true'?"
+    code='const foo = () => true; foo(1);'
+    expectedValue={true}
+>
+    ```js copy showLineNumbers filename="JavaScript"
 const foo = () => true;
 
-console.log(foo(1));
+    document.writeln(foo(1));
 ```
+</Question>
 
 ## Question 6
 
-```js copy
+<Question
+    question="Shows 'true'?"
+    code='const foo = true; foo();'
+    expectedValue={true}
+>
+    ```js copy showLineNumbers filename="JavaScript"
 const foo = true;
 
-console.log(foo());
+    document.writeln(foo());
 ```
+</Question>
 
 ## Question 7
 
-```js copy
+<Question
+    question="Shows 'true'?"
+    code='function foo() { return true; } foo();'
+    expectedValue={true}
+>
+    ```js copy showLineNumbers filename="JavaScript"
 function foo() {
     return true;
 }
 
-console.log(foo());
+    document.writeln(foo());
 ```
+</Question>

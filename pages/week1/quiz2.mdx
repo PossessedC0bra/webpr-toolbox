@@ -1,8 +1,15 @@
+import Question from "../../components/Question";
+
 # Quiz 2
 
 ## Question 1
 
-```js copy
+<Question
+    question="Shows '2'?"
+    code='function one(x) {return x;} function two(x, y){ return x+y; } function three(x, y, z) { return x + y + z; } const functions = [null, one, two ,three]; functions[2](1, 1, 1);'
+    expectedValue={2}
+>
+    ```js copy showLineNumbers filename="JavaScript" showLineNumbers filename="JavaScript"
 function one(x) {
     return x;
 }
@@ -15,14 +22,18 @@ function three(x, y, z) {
 
 const functions = [null, one, two, three];
 
-console.log(functions[2](1,1,1));
+    document.writeln(functions[2](1,1,1));
 ```
-
-## Expected Output: 2
+</Question>
 
 ## Question 2
 
-```js copy
+<Question
+    question="Shows '3'?"
+    code='function one(x) {return x;} function two(x, y){ return x+y; } function three(x, y, z) { return x + y + z; } const functions = [null, one, two ,three]; functions[3](1, 1);'
+    expectedValue={3}
+>
+    ```js copy showLineNumbers filename="JavaScript"
 function one(x) {
     return x;
 }
@@ -35,14 +46,18 @@ function three(x, y, z) {
 
 const functions = [null, one, two, three];
 
-console.log(functions[3](1,1));
+    document.writeln(functions[3](1,1));
 ```
-
-## Expected Output: 3
+</Question>
 
 ## Question 3
 
-```js copy
+<Question
+    question="Shows '1'?"
+    code='function one(x) {return x;} function two(x, y){ return x+y; } function three(x, y, z) { return x + y + z; } const functions = [null, one, two ,three]; functions[1](1);'
+    expectedValue={1}
+>
+    ```js copy showLineNumbers filename="JavaScript"
 function one(x) {
     return x;
 }
@@ -55,7 +70,6 @@ function three(x, y, z) {
 
 const functions = [null, one, two, three];
 
-console.log(functions[1](1));
+    document.writeln(functions[1](1));
 ```
-
-## Expected Output: 1
+</Question>
