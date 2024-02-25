@@ -11,7 +11,9 @@ const config: DocsThemeConfig = {
             titleTemplate: '%s – WEBPR Toolbox',
         }
     },
-    footer: false,
+    footer: {
+        component: false
+    },
 }
 
 export default config
