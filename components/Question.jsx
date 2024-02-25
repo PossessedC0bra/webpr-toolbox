@@ -26,7 +26,7 @@ const Question = ({question, code, expectedValue, children}) => {
     const success = evaluationResult === null ? null : evaluationResult === expectedValue + "";
 
     const evaluateCode = () => {
-        let result = null;
+        let result;
         try {
             result = eval(code);
         } catch (e) {
@@ -37,7 +37,7 @@ const Question = ({question, code, expectedValue, children}) => {
     }
 
     return (<>
-            <div className={"flex justify-between items-center"}>
+            <div className={"mt-2 flex justify-between items-center"}>
                 <p>{question}</p>
                 {
                     success === null
