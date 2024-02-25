@@ -10,7 +10,8 @@ const config: DocsThemeConfig = {
         return {
             titleTemplate: '%s – WEBPR Toolbox',
         }
-    }
+    },
+    footer: false,
 }
 
 export default config
