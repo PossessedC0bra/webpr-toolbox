@@ -1,11 +1,12 @@
 import Question from "../../components/Question";
+import {Code} from "nextra/components";
 
 # Quiz 2
 
 ## Question 1
 
 <Question
-    question="Shows '2'?"
+    question={<>Shows <Code>2</Code> ?</>}
     code='function one(x) {return x;} function two(x, y){ return x+y; } function three(x, y, z) { return x + y + z; } const functions = [null, one, two ,three]; functions[2](1, 1, 1);'
     expectedValue={2}
 >
@@ -29,7 +30,7 @@ document.writeln(functions[2](1,1,1));
 ## Question 2
 
 <Question
-    question="Shows '3'?"
+    question={<>Shows <Code>3</Code> ?</>}
     code='function one(x) {return x;} function two(x, y){ return x+y; } function three(x, y, z) { return x + y + z; } const functions = [null, one, two ,three]; functions[3](1, 1);'
     expectedValue={3}
 >
@@ -53,7 +54,7 @@ document.writeln(functions[3](1,1));
 ## Question 3
 
 <Question
-    question="Shows '1'?"
+    question={<>Shows <Code>1</Code> ?</>}
     code='function one(x) {return x;} function two(x, y){ return x+y; } function three(x, y, z) { return x + y + z; } const functions = [null, one, two ,three]; functions[1](1);'
     expectedValue={1}
 >

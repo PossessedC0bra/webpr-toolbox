@@ -45,9 +45,9 @@ Given `id` and `konst`, is `F2` a proper eta reduction of `F1`?
 const id = x => x;
 const konst = x => y => x;
 
-const F1 = x => y => konst (id) (x) (y);
-const F2 = x => konst (id) (x);
-const F3 = konst (id);
+const F1 = x => y => konst(id)(x)(y);
+const F2 = x => konst(id)(x);
+const F3 = konst(id);
 ```
 
 YES
@@ -60,9 +60,9 @@ Given `id` and `konst`, is `F3` a proper eta reduction of `F2`?
 const id = x => x;
 const konst = x => y => x;
 
-const F1 = x => y => konst (id) (x) (y);
-const F2 = x => konst (id) (x);
-const F3 = konst (id);
+const F1 = x => y => konst(id)(x)(y);
+const F2 = x => konst(id)(x);
+const F3 = konst(id);
 ```
 
 YES

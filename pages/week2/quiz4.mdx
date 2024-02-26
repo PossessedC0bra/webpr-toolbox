@@ -1,11 +1,12 @@
 import Question from "../../components/Question";
+import {Code} from "nextra/components";
 
 # Quiz 4
 
 ## Question 1
 
 <Question
-    question="Shows 'true'?"
+    question={<>Shows <Code>true</Code>?</>}
     code={'function two() { let x = 2; return x; } try { x; true; } catch (e) { false; }'}
     expectedValue={true}
 >
@@ -26,7 +27,7 @@ import Question from "../../components/Question";
 ## Question 2
 
 <Question
-    question="Shows 'true'?"
+    question={<>Shows <Code>true</Code>?</>}
     code={'function two() { x = 2; return x; } try { x; true; } catch (e) { false; }'}
     expectedValue={true}
 >
@@ -47,7 +48,7 @@ import Question from "../../components/Question";
 ## Question 3
 
 <Question
-    question="Shows 'true'?"
+    question={<>Shows <Code>true</Code>?</>}
     code={'function two() { x = 2; return x; } two(); try { x; true; } catch (e) { false; }'}
     expectedValue={true}
 >
@@ -69,7 +70,7 @@ import Question from "../../components/Question";
 ## Question 4
 
 <Question
-    question="Shows 'true'?"
+    question={<>Shows <Code>true</Code>?</>}
     code={'let x = 0; function two() { let x = 2; return x; } two(); try { x; x === 0; } catch (e) { false; }'}
     expectedValue={true}
 >
@@ -92,7 +93,7 @@ import Question from "../../components/Question";
 ## Question 5
 
 <Question
-    question="Shows 'true'?"
+    question={<>Shows <Code>true</Code>?</>}
     code={'let x = 0; function two() { let x = 2; return x; } two(); try { x; x === 0; } catch (e) { false; }'}
     expectedValue={true}
 >

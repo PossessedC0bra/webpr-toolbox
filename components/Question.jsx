@@ -38,7 +38,7 @@ const Question = ({question, code, expectedValue, children}) => {
 
     return (<>
             <div className={"mt-2 flex justify-between items-center"}>
-                <p>{question}</p>
+                <div>{question}</div>
                 {
                     success === null
                         ? <Button onClick={evaluateCode}>
