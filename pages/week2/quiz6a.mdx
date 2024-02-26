@@ -1,0 +1,35 @@
+# Quiz 6a
+
+## Assignment: Eta reductions, returning functions
+
+Given
+
+```javascript copy
+const id  = y => y;
+const fst = x => y => x;
+```
+We want to write `snd` such that it returns the second argument like
+
+```javascript copy
+const snd = x => y => y;
+```
+but we can only use `fst` and `id` (not `x` and `y`) for the implementation.
+You might need eta operations to find the solution.
+The start of the function definition is added for you. Provide the function body only.
+
+```javascript copy
+const snd = <your code will be added here>
+^^^^^^^^^^^^
+Do not write that initial part!
+```
+
+```javascript copy showLineNumbers filename="Solution"
+fst(id);
+```
+
+Your solution will be tested against:
+```javascript copy
+const x_ = Math.random();
+const y_ = Math.random();
+snd(x_)(y_) === y_
+```

@@ -1,0 +1,79 @@
+# Quiz 6
+
+## Question 1
+
+Are `id1` and `id2` alpha-equivalent?
+
+```javascript copy showLineNumbers filename="JavaScript"
+const id1 = x => x;
+const id2 = y => y;
+```
+
+YES
+
+## Question 2
+
+Given `id`, is `a1` a proper beta reduction of `a2`?
+
+```javascript copy showLineNumbers filename="JavaScript"
+const id = x => x;
+
+const a1 = y => id(y);
+const a2 = y => y;
+```
+
+YES
+
+## Question 3
+
+Given `id`, is `a2` a proper beta reduction of `a1`?
+
+```javascript copy showLineNumbers filename="JavaScript"
+const id = x => x;
+
+const a1 = y => id(y);
+const a2 = y => y;
+```
+
+YES
+
+## Question 4
+
+Given `id` and `konst`, is `F2` a proper eta reduction of `F1`?
+
+```javascript copy showLineNumbers filename="JavaScript"
+const id = x => x;
+const konst = x => y => x;
+
+const F1 = x => y => konst (id) (x) (y);
+const F2 = x => konst (id) (x);
+const F3 = konst (id);
+```
+
+YES
+
+## Question 5
+
+Given `id` and `konst`, is `F3` a proper eta reduction of `F2`?
+
+```javascript copy showLineNumbers filename="JavaScript"
+const id = x => x;
+const konst = x => y => x;
+
+const F1 = x => y => konst (id) (x) (y);
+const F2 = x => konst (id) (x);
+const F3 = konst (id);
+```
+
+YES
+
+## Question 6
+
+Are `F1` and `F2` alpha-equivalent?
+
+```javascript copy showLineNumbers filename="JavaScript"
+const F1 = x => (x => x);
+const F2 = y => (x => y);
+```
+
+NO

@@ -1,0 +1,113 @@
+import Question from "../../components/Question";
+
+# Quiz 4
+
+## Question 1
+
+<Question
+    question="Shows 'true'?"
+    code={'function two() { let x = 2; return x; } try { x; true; } catch (e) { false; }'}
+    expectedValue={true}
+>
+    ```javascript copy showLineNumbers filename="JavaScript"
+    function two() {
+        let x = 2;
+        return x;
+    ｝
+    try { // is x in scope?
+        x;
+        document.writeln(true);
+    } catch (e) {
+        document.writeln(false);
+    }
+    ```
+</Question>
+
+## Question 2
+
+<Question
+    question="Shows 'true'?"
+    code={'function two() { x = 2; return x; } try { x; true; } catch (e) { false; }'}
+    expectedValue={true}
+>
+    ```javascript copy showLineNumbers filename="JavaScript"
+    function two() {
+        x = 2;
+        return x;
+    }
+    try { // is x in scope?
+        x;
+        document.writeln(true);
+    } catch (e) {
+        document.writeln(false);
+    }
+    ```
+</Question>
+
+## Question 3
+
+<Question
+    question="Shows 'true'?"
+    code={'function two() { x = 2; return x; } two(); try { x; true; } catch (e) { false; }'}
+    expectedValue={true}
+>
+    ```javascript copy showLineNumbers filename="JavaScript"
+    function two() {
+        x = 2;
+        return x;
+    }
+    two();
+    try { // is x in scope?
+        x;
+        document.writeln(true);
+    } catch (e) {
+        document.writeln(false);
+    ｝
+    ```
+</Question>
+
+## Question 4
+
+<Question
+    question="Shows 'true'?"
+    code={'let x = 0; function two() { let x = 2; return x; } two(); try { x; x === 0; } catch (e) { false; }'}
+    expectedValue={true}
+>
+    ```javascript copy showLineNumbers filename="JavaScript"
+    let x = 0;
+    function two() {
+        x = 2;
+        return x;
+    }
+    two();
+    try { // is x in scope?
+        x;
+        document.writeln(x === 0);
+    } catch (e) {
+        document.writeln(false);
+    }
+    ```
+</Question>
+
+## Question 5
+
+<Question
+    question="Shows 'true'?"
+    code={'let x = 0; function two() { let x = 2; return x; } two(); try { x; x === 0; } catch (e) { false; }'}
+    expectedValue={true}
+>
+    ```javascript copy showLineNumbers filename="JavaScript"
+    let x = 0;
+    function two() {
+        let x = 2;
+        return x;
+    }
+    two();
+    try { // is x in scope?
+        x;
+        document.writeln(x === 0);
+    } catch (e) {
+        document.writeln(false);
+    }
+    ```
+</Question>

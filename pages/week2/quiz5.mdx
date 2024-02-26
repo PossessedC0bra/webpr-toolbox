@@ -1,0 +1,135 @@
+import Question from "../../components/Question";
+
+# Quiz 5
+
+## Question 1
+
+<Question
+    question="Shows 'true'?"
+    code={'let x = 0; function two() { let x = 2; return x; } two(); try { x === 0; } catch (e) { false; }'}
+    expectedValue={true}
+>
+    ```javascript copy showLineNumbers filename="JavaScript"
+    let x = 0;
+    function two() {
+        let x = 2;
+        return x;
+    }
+    two();
+    try { // is x unchanged?
+        document.writeln(x === 0);
+    } catch (e) {
+        document.writeln(false);
+    }
+    ```
+</Question>
+
+## Question 2
+
+<Question
+    question="Shows 'true'?"
+    code={'let x = 0; function two() { let x = 2; return x; }(); try { x === 0; } catch (e) { false; }'}
+    expectedValue={true}
+>
+    ```javascript copy showLineNumbers filename="JavaScript"
+    let x = 0;
+    function two() {
+        let x = 2;
+        return x;
+    }();
+
+    try { // is x unchanged?
+        document.writeln(x === 0);
+    } catch (e) {
+        document.writeln(false);
+    }
+    ```
+</Question>
+
+## Question 3
+
+<Question
+    question="Shows 'true'?"
+    code={'let x = 0; (function two() { let x = 2; return x; })(); try { x === 0; } catch (e) { false; }'}
+    expectedValue={true}
+>
+    ```javascript copy showLineNumbers filename="JavaScript"
+    let x = 0;
+    (function two() {
+        let x = 2;
+        return x;
+    })();
+
+    try { // is x unchanged?
+        document.writeln(x === 0);
+    } catch (e) {
+        document.writeln(false);
+    }
+    ```
+</Question>
+
+## Question 4
+
+<Question
+    question="Shows 'true'?"
+    code={'let x = 0; (function() { let x = 2; return x; })(); try { x === 0; } catch (e) { false; }'}
+    expectedValue={true}
+>
+    ```javascript copy showLineNumbers filename="JavaScript"
+    let x = 0;
+    (function() {
+        let x = 2;
+        return x;
+    })();
+
+    try { // is x unchanged?
+        document.writeln(x === 0);
+    } catch (e) {
+        document.writeln(false);
+    }
+    ```
+</Question>
+
+## Question 5
+
+<Question
+    question="Shows 'true'?"
+    code={'let x = 0; (() => { let x = 2; return x; })(); try { x === 0; } catch (e) { false; }'}
+    expectedValue={true}
+>
+    ```javascript copy showLineNumbers filename="JavaScript"
+    let x = 0;
+    ( () => {
+        let x = 2;
+        return x;
+    })();
+
+    try { // is x unchanged?
+        document.writeln(x === 0);
+    } catch (e) {
+        document.writeln(false);
+    }
+    ```
+</Question>
+
+## Question 6
+
+<Question
+    question="Shows 'true'?"
+    code={'x = 0; (() => { x = 2; return x; })(); try { x === 0; } catch (e) { false; }'}
+    expectedValue={true}
+>
+    ```javascript copy showLineNumbers filename="JavaScript"
+    x = 0;
+    ( () => {
+        x = 2;
+        return x;
+    })();
+
+    try { // is x unchanged?
+        document.writeln(x === 0);
+    } catch (e) {
+        document.writeln(false);
+    }
+    ```
+</Question>
