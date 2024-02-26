@@ -2,8 +2,12 @@
 
 ## Assignment: curried function with => notation
 
-Write a function name 'plus' that returns the sum of its arguments, where the arguments are being passed in curried style, such that for all numbers x and y, plus()(x)(y) === x + y.
-Use the => notation exclusively, i.e. no function keyword.
+Write a function name `plus` that returns the sum of its arguments, where the arguments are being passed in curried style, such that for all numbers `x` and `y`, `plus()(x)(y) === x + y`.
+Use the `=>` notation exclusively, i.e. no `function` keyword.
+
+```javascript copy showLineNumbers filename="Solution"
+const plus = x => y => x + y;
+```
 
 Your solution will be tested against:
 
