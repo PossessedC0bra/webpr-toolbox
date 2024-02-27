@@ -11,7 +11,7 @@ const RevealChildren = ({children}: RevealChildrenProps) => {
 
     // use classes min-w-[150px] and min-h-[40px] to always fit the button regardless of the content
     return <div className={"relative min-w-[150px] min-h-[40px] flex justify-center items-center"}>
-        <div className={`w-full h-full grid ${!showChildren ? "blur-sm pointer-events-none" : ""}`}>
+        <div className={`w-full h-full grid ${!showChildren ? "blur-sm pointer-events-none select-none" : ""}`}>
             {children}
         </div>
         {!showChildren &&
