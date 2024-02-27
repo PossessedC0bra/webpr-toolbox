@@ -1,79 +1,71 @@
+import TrueFalseQuestion from "../../components/TrueFalseQuestion";
+import {Code} from "nextra/components";
+
 # Quiz 6
 
 ## Question 1
 
-Are `id1` and `id2` alpha-equivalent?
-
-```javascript copy showLineNumbers filename="JavaScript"
-const id1 = x => x;
-const id2 = y => y;
-```
-
-YES
+<TrueFalseQuestion question={<>Are <Code>id1</Code> and <Code>id2</Code> alpha-equivalent?</>} answer={true}>
+    ```javascript copy showLineNumbers filename="JavaScript"
+    const id1 = x => x;
+    const id2 = y => y;
+    ```
+</TrueFalseQuestion>
 
 ## Question 2
 
-Given `id`, is `a1` a proper beta reduction of `a2`?
+<TrueFalseQuestion question={<>Given <Code>id</Code>, is <Code>a1</Code> a proper beta expansion of <Code>a2</Code>?</>} answer={true}>
+    ```javascript copy showLineNumbers filename="JavaScript"
+    const id = x => x;
 
-```javascript copy showLineNumbers filename="JavaScript"
-const id = x => x;
-
-const a1 = y => id(y);
-const a2 = y => y;
-```
-
-YES
+    const a1 = y => id(y);
+    const a2 = y => y;
+    ```
+</TrueFalseQuestion>
 
 ## Question 3
 
-Given `id`, is `a2` a proper beta reduction of `a1`?
+<TrueFalseQuestion question={<>Given <Code>id</Code>, is <Code>a2</Code> a proper beta reduction of <Code>a1</Code>?</>} answer={true}>
+    ```javascript copy showLineNumbers filename="JavaScript"
+    const id = x => x;
 
-```javascript copy showLineNumbers filename="JavaScript"
-const id = x => x;
-
-const a1 = y => id(y);
-const a2 = y => y;
-```
-
-YES
+    const a1 = y => id(y);
+    const a2 = y => y;
+    ```
+</TrueFalseQuestion>
 
 ## Question 4
 
-Given `id` and `konst`, is `F2` a proper eta reduction of `F1`?
+<TrueFalseQuestion question={<>Given <Code>id</Code> and <Code>konst</Code>, is <Code>F2</Code> a proper eta reduction of<Code>F1</Code>?</>} answer={true}>
+    ```javascript copy showLineNumbers filename="JavaScript"
+    const id = x => x;
+    const konst = x => y => x;
 
-```javascript copy showLineNumbers filename="JavaScript"
-const id = x => x;
-const konst = x => y => x;
+    const F1 = x => y => konst(id)(x)(y);
+    const F2 = x => konst(id)(x);
+    const F3 = konst(id);
+    ```
+</TrueFalseQuestion>
 
-const F1 = x => y => konst(id)(x)(y);
-const F2 = x => konst(id)(x);
-const F3 = konst(id);
-```
-
-YES
 
 ## Question 5
 
-Given `id` and `konst`, is `F3` a proper eta reduction of `F2`?
+<TrueFalseQuestion question={<>Given <Code>id</Code> and <Code>konst</Code>, is <Code>F3</Code> a proper eta reduction of<Code>F2</Code>?</>} answer={true}>
+    ```javascript copy showLineNumbers filename="JavaScript"
+    const id = x => x;
+    const konst = x => y => x;
 
-```javascript copy showLineNumbers filename="JavaScript"
-const id = x => x;
-const konst = x => y => x;
-
-const F1 = x => y => konst(id)(x)(y);
-const F2 = x => konst(id)(x);
-const F3 = konst(id);
-```
-
-YES
+    const F1 = x => y => konst(id)(x)(y);
+    const F2 = x => konst(id)(x);
+    const F3 = konst(id);
+    ```
+</TrueFalseQuestion>
 
 ## Question 6
 
-Are `F1` and `F2` alpha-equivalent?
-
-```javascript copy showLineNumbers filename="JavaScript"
-const F1 = x => (x => x);
-const F2 = y => (x => y);
-```
-
-NO
+<TrueFalseQuestion question={<>Are <Code>F1</Code> and <Code>F2</Code> alpha-equivalent?</>} answer={false}>
+    ```javascript copy showLineNumbers filename="JavaScript"
+    const F1 = x => (x => x);
+    const F2 = y => (x => y);
+    ```
+</TrueFalseQuestion>
