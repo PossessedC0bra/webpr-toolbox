@@ -3,13 +3,13 @@ import {Checkbox} from "@/components/ui/checkbox";
 import {Label} from "@/components/ui/label";
 import RevealChildren from "@/components/RevealChildren";
 
-export interface TheoryQuestionProps {
+export interface TrueFalseQuestionProps {
     question: React.JSX.Element | string;
     answer: boolean;
     children: React.JSX.Element;
 }
 
-const TrueFalseQuestion = ({question, answer, children}: TheoryQuestionProps) => {
+const TrueFalseQuestion = ({question, answer, children}: TrueFalseQuestionProps) => {
     return <>
         <div className={"mt-2 flex justify-between items-center"}>
             <div>{question}</div>
