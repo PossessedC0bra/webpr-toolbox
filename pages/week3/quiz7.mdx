@@ -1,0 +1,127 @@
+import Question from "../../components/Question";
+import {Code} from "nextra/components";
+
+# Quiz 7
+
+## Question 1
+
+<Question
+    question={<>Shows <Code>true</Code>?</>}
+    code={'const T = x => y => x; const F = x => y => y; const pair = a => b => f => f(a)(b); const fst = p => p(T); const snd = p => p(F); const oneTwo = pair(1)(2); fst(oneTwo) === 1'}
+    expectedValue={true}
+>
+```javascript copy showLineNumbers filename="JavaScript"
+// standard definition of pair
+const pair = a => b => f => f(a)(b);
+const fst = p => p(T);
+const snd = p => p(F);
+
+const oneTwo = pair(1)(2);
+document.writeln(fst(oneTwo) === 1);
+```
+</Question>
+
+## Question 2
+
+<Question
+    question={<>Shows <Code>true</Code>?</>}
+    code={'const T = x => y => x; const F = x => y => y; const pair = a => b => f => f(a)(b); const fst = p => p(T); const snd = p => p(F); const oneTwo = pair(1, 2); fst(oneTwo) === 1'}
+    expectedValue={true}
+>
+```javascript copy showLineNumbers filename="JavaScript"
+// standard definition of pair
+const pair = a => b => f => f(a)(b);
+const fst = p => p(T);
+const snd = p => p(F);
+
+const oneTwo = pair(1, 2);
+document.writeln(fst(oneTwo) === 1);
+```
+</Question>
+
+## Question 3
+
+<Question
+    question={<>Shows <Code>true</Code>?</>}
+    code={'const T = x => y => x; const F = x => y => y; const pair = a => b => f => f(a)(b); const fst = p => p(T); const snd = p => p(F); const oneTwo = pair(1)(2); fst(oneTwo) = 0; fst(oneTwo) === 1'}
+    expectedValue={true}
+>
+```javascript copy showLineNumbers filename="JavaScript"
+// standard definition of pair
+const pair = a => b => f => f(a)(b);
+const fst = p => p(T);
+const snd = p => p(F);
+
+const oneTwo = pair(1, 2);
+fst(oneTwo) = 0;
+document.writeln(fst(oneTwo) === 0);
+```
+</Question>
+
+## Question 4
+
+<Question
+    question={<>Throws <Code>ReferenceError</Code>?</>}
+    code={'const T = x => y => x; const F = x => y => y; const pair = a => b => f => f(a)(b); const fst = p => p(T); const snd = p => p(F); const oneTwo = pair(1)(2); fst(oneTwo) = 0; fst(oneTwo) === 1'}
+    expectedValue="ReferenceError: Invalid left-hand side in assignment"
+>
+```javascript copy showLineNumbers filename="JavaScript"
+// standard definition of pair
+const pair = a => b => f => f(a)(b);
+const fst = p => p(T);
+const snd = p => p(F);
+
+const oneTwo = pair(1, 2);
+fst(oneTwo) = 0;
+document.writeln(fst(oneTwo) === 0);
+```
+</Question>
+
+## Question 5
+
+<Question
+    question={<>Shows <Code>true</Code>?</>}
+    code={'const T = x => y => x; const F = x => y => y; const pair = a => b => f => f(a)(b); const fst = p => p(T); const snd = p => p(F); const pairEq = a => b => fst(a) === fst(b) && snd(a) === snd(b); const pairPlus = a => b => pair(fst(a) + fst(b))(snd(a) + snd(b)); const oneTwo = pair(1)(2); const sum = pairPlus(oneTwo)(oneTwo); pairEq(sum)(pair(2)(4))'}
+    expectedValue={true}
+>
+```javascript copy showLineNumbers filename="JavaScript"
+// standard definition of pair
+const pair = a => b => f => f(a)(b);
+const fst = p => p(T);
+const snd = p => p(F);
+
+const pairEq = a => b => fst(a) === fst(b) && snd(a) === snd(b);
+
+const pairPlus = a => b => pair(fst(a) + fst(b))(snd(a) + snd(b));
+
+const oneTwo = pair(1, 2);
+const sum = pairPlus(oneTwo)(oneTwo);
+
+document.writeln(pairEq(sum)(pair(2)(4)));
+```
+</Question>
+
+## Question 6
+
+<Question
+    question={<>Shows <Code>true</Code>?</>}
+    code={'const T = x => y => x; const F = x => y => y; const pair = a => b => f => f(a)(b); const fst = p => p(T); const snd = p => p(F); const pairEq = a => b => fst(a) === fst(b) && snd(a) === snd(b); const pairMap = f => p => pair(f(fst(p)))(f(snd(p))); const oneTwo = pair(1)(2); const square = x => x * x; const result = pairMap(square)(oneTwo); pairEq(result)(pair(1)(4))'}
+    expectedValue={true}
+>
+```javascript copy showLineNumbers filename="JavaScript"
+// standard definition of pair
+const pair = a => b => f => f(a)(b);
+const fst = p => p(T);
+const snd = p => p(F);
+
+const pairEq = a => b => fst(a) === fst(b) && snd(a) === snd(b);
+
+const pairMap = f => p => pair(f(fst(p)))(f(snd(p)));
+
+const oneTwo = pair(1)(2);
+const square = x => x * x;
+const result = pairMap(square)(oneTwo);
+
+document.writeln(pairEq(result)(pair(1)(4)));
+```
+</Question>

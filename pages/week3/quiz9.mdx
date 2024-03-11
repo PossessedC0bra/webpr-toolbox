@@ -1,0 +1,131 @@
+import Question from "../../components/Question";
+import {Code} from "nextra/components";
+
+# Quiz 9
+
+## Question 1
+
+<Question
+    question={<>Shows <Code>cannot divide by 0</Code>?</>}
+    code={'const Left = x => f => g => f (x); const Right = x => f => g => g (x); const either = e => f => g => e (f) (g); const saveDiv = num => divisor => divisor === 0 ? Left("cannot divide by 0") : Right(num / divisor); const result = saveDiv(1)(0); either(result)(msg => msg)(val => val === 1)'}
+    expectedValue={'cannot divide by 0'}
+>
+    ```javascript copy showLineNumbers filename="JavaScript"
+    // standard either
+    const Left = x => f => g => f (x);
+    const Right = x => f => g => g (x);
+    const either = e => f => g => e (f) (g);
+
+    const saveDiv = num => divisor =>
+        divisor === 0
+            ? Left("cannot divide by 0")
+            : Right(num / divisor);
+
+    const result = saveDiv(1)(0);
+
+    either(result)
+        (msg => document.writeln(msg))
+        (val => document.writeln(val === 1));
+    ```
+</Question>
+
+## Question 2
+
+<Question
+    question={<>Shows <Code>true</Code>?</>}
+    code={'const Left = x => f => g => f (x); const Right = x => f => g => g (x); const either = e => f => g => e (f) (g); const saveDiv = num => divisor => divisor === 0 ? Left("cannot divide by 0") : Right(num / divisor); const result = saveDiv(1)(1); either(result)(msg => msg)(val => val === 1)'}
+    expectedValue={true}
+>
+    ```javascript copy showLineNumbers filename="JavaScript"
+    // standard either
+    const Left = x => f => g => f (x);
+    const Right = x => f => g => g (x);
+    const either = e => f => g => e (f) (g);
+
+    const saveDiv = num => divisor =>
+        divisor === 0
+            ? Left("cannot divide by 0")
+            : Right(num / divisor);
+
+    const result = saveDiv(1)(1);
+
+    either(result)
+        (msg => document.writeln(msg))
+        (val => document.writeln(val === 1));
+    ```
+</Question>
+
+## Question 3
+
+<Question
+    question={<>Shows <Code>cannot divide by 0</Code>?</>}
+    code={'const Left = x => f => g => f (x); const Right = x => f => g => g (x); const either = e => f => g => e (f) (g); const saveDiv = num => divisor => divisor === 0 ? Left("cannot divide by 0") : Right(num / divisor); const result = saveDiv(1)(0); either(result)(msg => document.writeln(msg));'}
+    expectedValue={'cannot divide by 0'}
+>
+    ```javascript copy showLineNumbers filename="JavaScript"
+    // standard either
+    const Left = x => f => g => f (x);
+    const Right = x => f => g => g (x);
+    const either = e => f => g => e (f) (g);
+
+    const saveDiv = num => divisor =>
+        divisor === 0
+            ? Left("cannot divide by 0")
+            : Right(num / divisor);
+
+    const result = saveDiv(1)(0);
+
+    either(result)
+        (msg => document.writeln(msg));
+    ```
+</Question>
+
+## Question 4
+
+<Question
+    question='Fails with error message?'
+    code={'const Left = x => f => g => f (x); const Right = x => f => g => g (x); const either = e => f => g => e (f) (g); const saveDiv = num => divisor => divisor === 0 ? Left("cannot divide by 0") : Right(num / divisor); const result = saveDiv(1)(0); either(result)(msg => document.writeln(msg));'}
+    expectedValue={'error message'}
+>
+    ```javascript copy showLineNumbers filename="JavaScript"
+    // standard either
+    const Left = x => f => g => f (x);
+    const Right = x => f => g => g (x);
+    const either = e => f => g => e (f) (g);
+
+    const saveDiv = num => divisor =>
+        divisor === 0
+            ? Left("cannot divide by 0")
+            : Right(num / divisor);
+
+    const result = saveDiv(1)(0);
+
+    either(result)
+        (msg => document.writeln(msg));
+    ```
+</Question>
+
+## Question 5
+
+<Question
+    question='Produces no output (fails silently)?'
+    code={'const Left = x => f => g => f (x); const Right = x => f => g => g (x); const either = e => f => g => e (f) (g); const saveDiv = num => divisor => divisor === 0 ? Left("cannot divide by 0") : Right(num / divisor); const result = saveDiv(1)(0); either(result)(msg => document.writeln(msg));'}
+    expectedValue={'g => e (f) (g)'}
+>
+    ```javascript copy showLineNumbers filename="JavaScript"
+    // standard either
+    const Left = x => f => g => f (x);
+    const Right = x => f => g => g (x);
+    const either = e => f => g => e (f) (g);
+
+    const saveDiv = num => divisor =>
+        divisor === 0
+            ? Left("cannot divide by 0")
+            : Right(num / divisor);
+
+    const result = saveDiv(1)(0);
+
+    either(result)
+        (msg => document.writeln(msg));
+    ```
+</Question>
