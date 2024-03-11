@@ -1,0 +1,21 @@
+import RevealChildren from "../../components/RevealChildren";
+
+# Quiz 9f
+
+## Assignment: reduce
+
+Provide a function (or lambda expression) named 'join' such that
+```javascript copy
+[1,2,3].reduce(join('-')) equals '1-2-3'
+```
+<RevealChildren>
+    ```javascript copy showLineNumbers filename="Solution"
+    const join = (separator) => (acc, value) => acc + separator + value
+    ```
+</RevealChildren>
+
+Your solution will be tested against:
+
+```javascript copy
+[1,2,3].reduce(join('-')) === '1-2-3'
+```
