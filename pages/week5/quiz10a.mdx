@@ -1,0 +1,30 @@
+import RevealChildren from "../../components/RevealChildren";
+
+# Quiz 10a
+
+## Assignment: Using `eval()`
+
+Your user has entered a new business rule on how to calculate
+this year's bonuses. He entered a formula through a web form and it is available
+through the `string` variable `bonusFormula`.
+The formula refers to the employee as `employee` like in
+`employee.bonus = employee.revenue * 0.2`
+
+Provide a function (or lambda expression) named `bonusCalculation` that
+calculates an employee's bonus by using the user-provided bonusFormula.
+
+Do <b>NOT</b> use the "Function" class.
+
+<RevealChildren>
+    ```javascript copy showLineNumbers filename="Solution"
+    const bonusCalculation = employee => eval(bonusFormula);
+    ```
+</RevealChildren>
+
+Your solution will be tested against:
+
+```javascript
+const e = {revenue: 10000, bonus: null};
+bonusCalculation(e);
+e.bonus === e.revenue * factor_;
+```
