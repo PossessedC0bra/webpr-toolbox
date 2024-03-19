@@ -1,0 +1,33 @@
+import RevealChildren from "../../components/RevealChildren";
+
+# Quiz 10b
+
+## Assignment: Using `Function()`
+
+Your user has entered a new business rule on how to calculate
+this year's bonuses. He entered a formula through a web form and it is available
+through the `string` variable `bonusFormula`.
+The formula refers to the employee as `employee` like in
+`employee.revenue * 0.2` (note that this only calculates but does not set the bonus)
+
+Provide a function (or lambda expression) named `bonusCalculation` that
+calculates an employee's bonus by using the user-provided bonusFormula.
+
+Since we will give bonuses to many employees, do <b>NOT</b> use the `eval` function
+and do <b>NOT</b> use side effects like setting surrounding variables.
+
+<RevealChildren>
+    ```javascript copy showLineNumbers filename="Solution"
+    const bonusCalculation = employee => {
+        const calc = new Function('employee', `return ${bonusFormula}`);
+        employee.bonus = calc(employee);
+    };
+    ```
+</RevealChildren>
+
+Your solution will be tested against:
+```javascript
+const e = {revenue: 10000, bonus: null};
+bonusCalculation(e);
+e.bonus === e.revenue * factor_;
+```
