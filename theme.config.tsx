@@ -11,8 +11,11 @@ const config: DocsThemeConfig = {
             titleTemplate: '%s – WEBPR Toolbox',
         }
     },
+    sidebar: {
+        defaultMenuCollapseLevel: 1,
+    },
     footer: {
-        component: false
+        component: false,
     },
 }
 
