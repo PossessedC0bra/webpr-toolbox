@@ -1,0 +1,82 @@
+import Question from "../../components/Question";
+import {Code} from "nextra/components";
+
+# Quiz 14
+
+## Question 1
+
+<Question
+    question={<>Shows <Code>true</Code>?</>}
+    code='const Empty = (() => { function Empty() {} return Empty; }) (); const empty = Empty; empty instanceof Empty'
+    expectedValue={true}
+>
+```javascript copy showLineNumbers filename="JavaScript"
+const Empty = (() => {
+    function Empty() {}
+    return Empty;
+}) ();
+
+const empty = Empty;
+
+empty instanceof Empty
+```
+</Question>
+
+## Question 2
+
+<Question
+    question={<>Shows <Code>true</Code>?</>}
+    code='const Empty = (() => { function Empty() { } return Empty; }) (); const empty = new Empty; empty instanceof Empty'
+    expectedValue={true}
+>
+```javascript copy showLineNumbers filename="JavaScript"
+const Empty = (() => {
+    function Empty() {}
+    return Empty;
+}) ();
+
+const empty = new Empty;
+
+empty instanceof Empty
+```
+</Question>
+
+## Question 3
+
+<Question
+    question={<>Shows <Code>true</Code>?</>}
+    code='const Empty = (() => { function Empty() { } return Empty; }) (); const empty = new Empty; const also = new Empty; Empty.prototype.answer = 42; empty.answer === 42 && also.answer === 42'
+    expectedValue={true}
+>
+```javascript copy showLineNumbers filename="JavaScript"
+const Empty = (() => {
+    function Empty() {}
+    return Empty;
+}) ();
+
+const empty = new Empty;
+const also = new Empty;
+
+Empty.prototype.answer = 42;
+
+empty.answer === 42 && also.answer === 42
+```
+</Question>
+
+## Question 4
+
+<Question
+    question={<>Shows <Code>true</Code>?</>}
+    code='function Empty() {} const empty = new Empty(); Empty.prototype.answer = 42; empty.answer === 42'
+    expectedValue={true}
+>
+```javascript copy showLineNumbers filename="JavaScript"
+function Empty() {}
+
+const empty = new Empty();
+
+Empty.prototype.answer = 42;
+
+empty.answer === 42
+```
+</Question>
