@@ -1,0 +1,104 @@
+import Question from "../../components/Question";
+import {Code} from "nextra/components";
+
+# Quiz 14
+
+## Question 1
+
+<Question
+    question={<>Shows <Code>true</Code>?</>}
+    code='const Person = name => { let age = 0; return { getAge: () => age, setAge: newAge => age = newAge, getName: () => name, setName: newName => name = newName } }; const me = Person("Myself"); me.setAge(50); me.getAge() === 50'
+    expectedValue={true}
+>
+```javascript copy showLineNumbers filename="JavaScript"
+// same construction for all choices
+const Person = name => {
+    let age = 0;
+    return {
+        getAge: () => age,
+        setAge: newAge => age = newAge,
+        getName: () => name,
+        setName: newName => name = newName
+    }
+};
+
+const me = Person("Myself");
+me.setAge(50);
+me.getAge() === 50
+```
+</Question>
+
+## Question 2
+
+<Question
+    question={<>Shows <Code>true</Code>?</>}
+    code='const Person = name => { let age = 0; return { getAge: () => age, setAge: newAge => age = newAge, getName: () => name, setName: newName => name = newName } }; const me = Person("Myself"); me.setName("Sherlock"); me.getName() === "Sherlock"'
+    expectedValue={true}
+>
+```javascript copy showLineNumbers filename="JavaScript"
+// same construction for all choices
+const Person = name => {
+    let age = 0;
+    return {
+        getAge: () => age,
+        setAge: newAge => age = newAge,
+        getName: () => name,
+        setName: newName => name = newName
+    }
+};
+
+const me = Person("Myself");
+me.setName("Sherlock");
+me.getName() === "Sherlock"
+```
+</Question>
+
+## Question 3
+
+<Question
+    question={<>Shows <Code>true</Code>?</>}
+    code='const Person = name => { let age = 0; return { getAge: () => age, setAge: newAge => age = newAge, getName: () => name, setName: newName => name = newName } }; const me = Person("Myself"); me.age = 50; me.getAge() === 50'
+    expectedValue={true}
+>
+```javascript copy showLineNumbers filename="JavaScript"
+// same construction for all choices
+const Person = name => {
+    let age = 0;
+    return {
+        getAge: () => age,
+        setAge: newAge => age = newAge,
+        getName: () => name,
+        setName: newName => name = newName
+    }
+};
+
+const me = Person("Myself");
+me.age = 50;
+me.getAge() === 50
+```
+</Question>
+
+## Question 4
+
+<Question
+    question={<>Shows <Code>true</Code>?</>}
+    code='const Person = name => { let age = 0; return { getAge: () => age, setAge: newAge => age = newAge, getName: () => name, setName: newName => name = newName } }; const me = Person("Myself"); me.name = "***"; me.getName() === "***"'
+    expectedValue={true}
+>
+```javascript copy showLineNumbers filename="JavaScript"
+// same construction for all choices
+const Person = name => {
+    let age = 0;
+    return {
+        getAge: () => age,
+        setAge: newAge => age = newAge,
+        getName: () => name,
+        setName: newName => name = newName
+    }
+};
+
+const me = Person("Myself");
+me.name = "***";
+me.getName() === "***"
+```
+</Question>
